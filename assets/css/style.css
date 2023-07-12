@@ -1,0 +1,501 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #f1efef;
+}
+
+h3 {
+  font-size: 1.7rem;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 150%;
+}
+
+a {
+  text-decoration: none;
+}
+a :hover {
+  color: #2788bc;
+}
+a :active {
+  color: #090909;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  width: 100%;
+  height: 100%;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  padding: 16px 21px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.06);
+  margin-bottom: 5px;
+}
+nav .logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+nav .logo .name {
+  color: #090909;
+}
+nav .logo .name b {
+  font-size: 1.3rem;
+}
+nav .nav-links {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  gap: 70px;
+  width: 100%;
+  transform: translateY(-100%);
+  text-align: center;
+  background-color: #f1efef;
+  transition: all 0.3s;
+  z-index: 2;
+}
+nav .nav-links a {
+  color: #6d6a6a;
+}
+nav .nav-links a:hover {
+  text-decoration: none;
+  color: #090909;
+}
+nav .nav-links.show {
+  top: 50px;
+  display: flex;
+  transform: translateY(0);
+}
+nav .burger {
+  display: block;
+  cursor: pointer;
+  margin-left: auto;
+  z-index: 2;
+}
+nav .burger .line {
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: #090909;
+  border-radius: 3px;
+}
+nav .btn-drop {
+  background-color: transparent;
+  color: #6d6a6a;
+  padding: 1rem;
+  font-size: 1.4rem;
+  border: none;
+}
+nav .dropdown {
+  position: relative;
+  display: inline-block;
+}
+nav .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1efef;
+  min-width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+nav .dropdown-content a {
+  color: #6d6a6a;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+nav .dropdown-content a:hover {
+  background-color: #f1efef;
+}
+nav .dropdown:hover .dropdown-content {
+  display: block;
+}
+nav .dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+.jumbotron {
+  min-height: 60vh;
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  transition: transform 2s ease-in-out;
+}
+.slide img {
+  width: 100%;
+  height: auto;
+}
+.slide .caption {
+  position: absolute;
+  top: 65%;
+  left: 30px;
+  width: 70%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px;
+  text-align: left;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 10px 14px;
+  font-size: 10px;
+  font-weight: bold;
+  background-color: transparent;
+  color: #fff;
+  border-radius: 20px;
+  border-color: #f1efef;
+  border: solid 1px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.next {
+  right: 0;
+  transform: translateY(-50%);
+}
+
+#ourvalues {
+  padding: 30px 40px;
+}
+#ourvalues .group-value {
+  display: flex;
+  flex-direction: column;
+}
+#ourvalues h1 {
+  text-align: center;
+}
+#ourvalues .bg-innovative {
+  background-color: #d53838;
+  border: solid 2px red;
+  padding: 40px;
+  text-align: center;
+  margin-top: 30px;
+  width: 100%;
+}
+#ourvalues .bg-innovative h2, #ourvalues .bg-innovative p {
+  color: #f1efef;
+  margin-top: 15px;
+}
+#ourvalues .bg-loyalty {
+  background-color: #207642;
+  border: solid 2px green;
+  padding: 40px;
+  text-align: center;
+  margin-top: 30px;
+  width: 100%;
+}
+#ourvalues .bg-loyalty h2, #ourvalues .bg-loyalty p {
+  color: #f1efef;
+  margin-top: 15px;
+}
+#ourvalues .bg-respect {
+  background-color: #2788bc;
+  border: solid 2px rgb(3, 91, 120);
+  padding: 40px;
+  text-align: center;
+  margin-top: 30px;
+  width: 100%;
+}
+#ourvalues .bg-respect h2, #ourvalues .bg-respect p {
+  color: #f1efef;
+  margin-top: 15px;
+}
+#ourvalues svg {
+  color: #f1efef;
+  width: 10%;
+}
+
+#contact {
+  padding: 50px 40px;
+}
+#contact .contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+}
+#contact h3 {
+  text-align: center;
+  margin-top: 20px;
+}
+#contact form div {
+  margin-bottom: 10px;
+}
+#contact label {
+  display: block;
+  font-size: 1.2rem;
+}
+#contact input[type=text],
+#contact input[type=email],
+#contact textarea {
+  width: 100%;
+  height: 30px;
+  margin-top: 15px;
+  border: 1px solid #090909;
+}
+#contact button[type=submit] {
+  margin-top: 10px;
+}
+#contact .btn-submit {
+  background-color: #2788bc;
+  color: #f1efef;
+  width: 100%;
+  height: auto;
+  padding: 10px 12px;
+  border: 2px solid rgb(6, 56, 62);
+  font-size: 1.2rem;
+}
+
+footer {
+  padding: 50px 40px;
+  min-height: 20vh;
+  background-color: #090909;
+}
+footer p {
+  color: #f1efef;
+  font-size: 1rem;
+  text-align: center;
+}
+footer .sosmed {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+footer .sosmed img {
+  width: 5%;
+}
+
+@media screen and (min-width: 600px) {
+  * {
+    font-size: 16px;
+  }
+  #ourvalues .bg-innovative {
+    padding: 100px;
+  }
+}
+@media screen and (min-width: 768px) {
+  * {
+    font-size: 18px;
+  }
+  nav {
+    padding-left: 100px;
+    padding-right: 100px;
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav .nav-links {
+    flex-direction: row;
+    transform: none;
+    z-index: none;
+    transition: none;
+    justify-content: right;
+    position: relative;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+  }
+  nav .nav-links a {
+    font-size: 0.8rem;
+  }
+  nav .nav-links .btn-drop {
+    font-size: 0.8rem;
+  }
+  nav .burger {
+    display: none;
+  }
+  .slide .caption {
+    width: 55%;
+  }
+  #ourvalues {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  #ourvalues .group-value {
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  #ourvalues h1 {
+    margin-top: 40px;
+  }
+  #ourvalues h2 {
+    font-size: 1.5rem;
+  }
+  #ourvalues p {
+    font-size: 0.6rem;
+  }
+  #ourvalues .bg-innovative {
+    padding: 50px;
+    height: auto;
+    width: 100%;
+  }
+  #ourvalues .bg-loyalty {
+    padding: 50px;
+    height: auto;
+    width: 100%;
+    height: auto;
+  }
+  #ourvalues .bg-respect {
+    padding: 50px;
+    height: auto;
+    width: 100%;
+  }
+  #contact {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 100px;
+  }
+  #contact h3 {
+    margin-bottom: 40px;
+  }
+  #contact .contact-form {
+    margin: auto;
+    width: 60%;
+  }
+  #contact input[type=text],
+  #contact input[type=email],
+  #contact textarea {
+    margin-top: 15px;
+    border: 1px solid #090909;
+  }
+  footer .sosmed {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+  footer .sosmed img {
+    width: 2%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  * {
+    font-size: 20px;
+  }
+  nav {
+    padding-left: 100px;
+    padding-right: 100px;
+    height: 3rem;
+  }
+  nav .nav-links {
+    flex-direction: row;
+    transform: none;
+    z-index: none;
+    transition: none;
+    justify-content: right;
+    position: relative;
+    gap: 70px;
+    align-items: center;
+  }
+  nav .nav-links a {
+    font-size: 0.8rem;
+  }
+  nav .nav-links .btn-drop {
+    font-size: 0.8rem;
+  }
+  nav .burger {
+    display: none;
+  }
+  .slide .caption {
+    width: 55%;
+  }
+  #ourvalues {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  #ourvalues .group-value {
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  #ourvalues h1 {
+    margin-top: 40px;
+  }
+  #ourvalues .bg-innovative {
+    padding: 80px;
+  }
+  #ourvalues .bg-loyalty {
+    padding: 80px;
+  }
+  #ourvalues .bg-respect {
+    padding: 80px;
+  }
+  #contact {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 100px;
+  }
+  #contact h3 {
+    margin-bottom: 40px;
+  }
+  #contact .contact-form {
+    margin: auto;
+    width: 40%;
+  }
+  #contact input[type=text],
+  #contact input[type=email],
+  #contact textarea {
+    margin-top: 15px;
+    border: 1px solid #090909;
+  }
+  footer .sosmed {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+  footer .sosmed img {
+    width: 2%;
+  }
+}/*# sourceMappingURL=style.css.map */

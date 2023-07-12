@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- navbar start -->
+    <header>
+        <nav>
+            <a href="#" class="logo">
+                <div class="name"><b>Company</b></div>
+            </a>
+            <ul class="nav-links">
+                <li class="dropdown"><button class="btn-drop" href="#">ABOUT</button>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                    </div>
+                </li>
+                <li><a href="#ourwork">OURWORK</a></li>
+                <li><a href="#ourteam">OURTEAM</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+    <!-- navbar end -->
+
+    <!-- section hero - carousel -->
+    <section id="hero" class="jumbtron">
+        <div class="slideshow-container">
+            <div class="slide">
+              <img src="./assets/images/bg.jpg" alt="Gambar 1">
+              <div class="caption">
+                <p>THIS IS A PLACE WHERE TECHNOLOGY & <br>
+                    CREATIVITY FUSED INTO DIGITAL CHEMISTRY
+                </p>
+              </div>
+            </div>
+            
+            <div class="slide">
+              <img src="./assets/images/about-bg.jpg" alt="Gambar 2">
+              <div class="caption">
+                <p>
+                    WE DONT HAVE THE BEST TEAM BUT WE HAVE THE <br>
+                    GREATEST TEAM
+                </p>
+              </div>
+            </div>
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+          
+    </section>
+    <!-- section hero - carousel -->
+
+    <!-- section our values -->
+    <section id="ourvalues" class="jumbotron">
+        <h1>OUR VALUES</h1>
+        <div class="group-value">
+            <div class="bg-innovative">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+                </svg>
+                <h2>INNOVATIVE</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui aspernatur reiciendis amet dicta rerum voluptate!</p>
+            </div>
+            <div class="bg-loyalty">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
+                </svg>                  
+                <h2>LOYALTY</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui aspernatur reiciendis amet dicta rerum voluptate!</p>
+            </div>
+            <div class="bg-respect">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.031.352 5.988 5.988 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971z" />
+                  </svg>                  
+                <h2>RESPECT</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui aspernatur reiciendis amet dicta rerum voluptate!</p>
+            </div>
+        </div>
+    </section>
+    <!-- section our values -->
+
+    <!-- section contact-us -->
+    <section id="contact" class="jumbotron">
+        <h3>CONTACT US</h3>
+        <div class="contact-form">
+            <form id="contactForm" onsubmit="return validateForm()">
+                <div>
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" required></textarea>
+                </div>
+                <button class="btn-submit" type="submit">SUBMIT</button>
+            </form>
+        </div>
+    </section>
+    <!-- section contact us -->
+
+    <!-- footer -->
+    <footer>
+        <p>
+            Copyright 2016. PT Company
+        </p>
+        <div class="sosmed">
+            <img src="./assets/images/facebook-official.png" alt="facebook-official">
+            <img src="./assets/images/twitter.png" alt="twitter">
+        </div>
+    </footer>
+    <!-- footer -->
+    <script src="script.js"></script>
+    <script src="form.js"></script>
+</body>
+</html>
